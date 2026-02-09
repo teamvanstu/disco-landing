@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISCO | Live Local. Save Disco.</title>
+    <meta name="description" content="Vancouver's premier lifestyle rewards app. Unlock exclusive discounts at restaurants, spas, gyms, and local boutiques.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Urbanist', 'sans-serif'],
+                    },
+                    colors: {
+                        disco: {
+                            black: '#0a0a0a',
+                            dark: '#121212',
+                            neon: '#deff9a', 
+                            purple: '#b08bf8',
+                            gray: '#2a2a2a'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0a0a0a; color: white; overflow-x: hidden; }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .neon-glow { box-shadow: 0 0 20px rgba(222, 255, 154, 0.3); }
+        html { scroll-behavior: smooth; }
+        .category-pill:hover { background-color: #deff9a; color: black; border-color: #deff9a; }
+    </style>
+</head>
+<body class="antialiased selection:bg-disco-neon selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 cursor-pointer">
+                    <span class="text-3xl font-black tracking-tighter text-white">DISCO<span class="text-disco-neon">.</span></span>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#explore" class="hover:text-disco-neon transition-colors duration-300 font-medium">Explore</a>
+                        <a href="#how-it-works" class="hover:text-disco-neon transition-colors duration-300 font-medium">How it Works</a>
+                        <a href="#business" class="text-gray-400 hover:text-white transition-colors duration-300">Partner with Us</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="#download" class="bg-white text-black px-6 py-2.5 rounded-full font-bold hover:bg-disco-neon hover:scale-105 transition-all duration-300">
+                        Download Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-32 pb-16 sm:pt-40 sm:pb-24 overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-disco-neon/20 rounded-full blur-[120px] -z-10 animate-pulse-slow"></div>
+        <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-disco-purple/20 rounded-full blur-[100px] -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                <div class="lg:col-span-6 text-center lg:text-left mb-16 lg:mb-0">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full glass-panel border border-disco-neon/30 text-disco-neon text-sm font-bold mb-6">
+                        <span class="flex h-2 w-2 rounded-full bg-disco-neon mr-2 animate-pulse"></span>
+                        VANCOUVER ON SALE
+                    </div>
+                    <h1 class="text-5xl sm:text-7xl font-black tracking-tight mb-6 leading-tight">
+                        Live Local.<br>
+                        <span class="text-disco-neon">Save Disco.</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-8 max-w-lg mx-auto lg:mx-0">
+                        The only lifestyle rewards app that covers your whole day. From your morning coffee to your midnight taco, and everything in between.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button class="flex items-center justify-center bg-white text-black px-8 py-4 rounded-xl font-bold text-lg hover:bg-disco-neon transition-all duration-300 w-full sm:w-auto">
+                            <i class="fa-brands fa-apple text-2xl mr-3"></i> App Store
+                        </button>
+                        <button class="flex items-center justify-center glass-panel text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 w-full sm:w-auto">
+                            <i class="fa-brands fa-google-play text-xl mr-3"></i> Google Play
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Phone Mockup -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative w-[300px] sm:w-[350px] mx-auto animate-float">
+                        <div class="relative z-10 bg-black rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden aspect-[9/19]">
+                            <div class="absolute inset-0 bg-disco-dark flex flex-col">
+                                <div class="px-6 pt-12 pb-4 flex justify-between items-center bg-black">
+                                    <div class="text-xl font-black text-white">DISCO<span class="text-disco-neon">.</span></div>
+                                    <div class="flex space-x-2">
+                                        <div class="h-8 w-8 rounded-full bg-disco-neon flex items-center justify-center text-black text-xs font-bold">8</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-1 px-4 space-y-4 overflow-hidden pt-4">
+                                    <!-- Diversified Card 1 -->
+                                    <div class="bg-gray-800 rounded-2xl p-4 relative overflow-hidden h-40">
+                                        <div class="absolute inset-0">
+                                            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover opacity-50">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                                        </div>
+                                        <div class="relative z-10 h-full flex flex-col justify-end">
+                                            <div class="text-xs font-bold text-disco-neon mb-1">HEALTH & BEAUTY</div>
+                                            <h3 class="text-lg font-bold">Nirvana Spa</h3>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-xl font-black">$25 OFF</span>
+                                                <span class="bg-white text-black px-2 py-1 rounded text-[10px] font-bold">CLAIM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Diversified Card 2 -->
+                                    <div class="bg-gray-800 rounded-2xl p-4 relative overflow-hidden h-40">
+                                        <div class="absolute inset-0">
+                                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover opacity-50">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                                        </div>
+                                        <div class="relative z-10 h-full flex flex-col justify-end">
+                                            <div class="text-xs font-bold text-disco-neon mb-1">FITNESS</div>
+                                            <h3 class="text-lg font-bold">Iron Works Gym</h3>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-xl font-black">FREE PASS</span>
+                                                <span class="bg-white text-black px-2 py-1 rounded text-[10px] font-bold">CLAIM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mx-6 mb-8 mt-2 bg-gray-800/80 backdrop-blur rounded-2xl p-4 flex justify-around text-gray-500">
+                                    <i class="fa-solid fa-house text-white"></i>
+                                    <i class="fa-solid fa-tags"></i>
+                                    <i class="fa-solid fa-map"></i>
+                                    <i class="fa-solid fa-circle-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Explore -->
+    <section id="explore" class="py-20 bg-white/5 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="category-pill border border-white/20 px-6 py-3 rounded-full font-bold transition-all cursor-pointer">🍔 Dining</div>
+                <div class="category-pill border border-white/20 px-6 py-3 rounded-full font-bold transition-all cursor-pointer">✂️ Barber & Spas</div>
+                <div class="category-pill border border-white/20 px-6 py-3 rounded-full font-bold transition-all cursor-pointer">🛍️ Local Retail</div>
+                <div class="category-pill border border-white/20 px-6 py-3 rounded-full font-bold transition-all cursor-pointer">🏋️ Gyms & Yoga</div>
+                <div class="category-pill border border-white/20 px-6 py-3 rounded-full font-bold transition-all cursor-pointer">🎟️ Events</div>
+                <div class="category-pill border border-white/20 px-6 py-3 rounded-full font-bold transition-all cursor-pointer">🚲 Rentals</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (Lifestyle Version) -->
+    <section id="how-it-works" class="py-24 bg-disco-black">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-disco-neon text-black rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Flash Deals</h3>
+                    <p class="text-gray-400">Claim limited-time offers when businesses need you most. Save up to 50% instantly.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-disco-neon text-black rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
+                        <i class="fa-solid fa-record-vinyl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Earn Discs</h3>
+                    <p class="text-gray-400">Every visit earns you "Discs." Collect enough to unlock free services and premium rewards.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-disco-neon text-black rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">VIP Status</h3>
+                    <p class="text-gray-400">Our members get the "Disco Treatment"—skip lines, get exclusive menu items, and early access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- B2B Section (Generic Business) -->
+    <section id="business" class="py-24 px-4">
+        <div class="max-w-5xl mx-auto bg-disco-neon rounded-[2.5rem] p-10 md:p-20 text-black text-center relative overflow-hidden">
+             <div class="relative z-10">
+                <h2 class="text-4xl md:text-6xl font-black mb-6">Your Business.<br>Fuller.</h2>
+                <p class="text-xl mb-10 max-w-2xl mx-auto font-medium">
+                    Whether you run a cafe, a bike shop, or a law firm—DISCO brings you new customers during your slow hours. Zero risk. Zero monthly fees.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <button class="bg-black text-white px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-transform">
+                        Partner with DISCO
+                    </button>
+                    <button class="bg-black/10 text-black border border-black/20 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-black/5 transition-colors">
+                        View Pricing
+                    </button>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <span class="text-3xl font-black text-white mb-6 md:mb-0">DISCO<span class="text-disco-neon">.</span></span>
+                <div class="flex space-x-8">
+                    <a href="#" class="text-gray-400 hover:text-disco-neon transition-colors"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-disco-neon transition-colors"><i class="fa-brands fa-tiktok text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-disco-neon transition-colors"><i class="fa-brands fa-x-twitter text-2xl"></i></a>
+                </div>
+            </div>
+            <div class="text-center text-gray-600 text-sm border-t border-white/5 pt-8">
+                &copy; 2026 DISCO Technologies Inc. Born in Vancouver, BC.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
