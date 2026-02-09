@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "disconow",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
